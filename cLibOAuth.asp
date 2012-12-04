@@ -41,6 +41,9 @@
 		' used to globally identify process errors
 		Private m_strErrorCode
 
+		' used to set host header
+		Private m_strHost
+
 		' the request type - e.g. POST, GET
 		Private m_strRequestMethod
 
@@ -98,6 +101,10 @@
 			ErrorCode = m_strErrorCode
 		End Property
 
+		Public Property Let Host(pData)
+			m_strHost = pData
+		End Property
+
 		Public Property Get LoggedIn
 			If IsNull(m_blnLoggedIn) Then
 				Call Get_LoggedIn()
@@ -152,7 +159,7 @@
 				objXMLHTTP.Open m_strRequestMethod, strRequestURL, False
 				objXMLHTTP.SetRequestHeader "Content-Type","application/x-www-form-urlencoded"
 				objXMLHTTP.SetRequestHeader "User-Agent", m_strUserAgent
-				objXMLHTTP.SetRequestHeader "Host", TWITTER_API_HOST
+				objXMLHTTP.SetRequestHeader "Host", m_strHost
 
 				objXMLHTTP.Send()
 
