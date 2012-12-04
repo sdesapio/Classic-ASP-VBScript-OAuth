@@ -51,7 +51,7 @@
 		' Absolute URL is recommended
 		Private m_strTimeoutURL
 
-		' usded to set user-agent header
+		' used to set user-agent header
 		Private m_strUserAgent
 
 	'**************************************************************************
