@@ -23,7 +23,7 @@
 		' additional parameters exclusive to the current call
 		Private m_objParameters
 
-		' reference to the utilities class (Eccoding, response extraction, 
+		' reference to the utilities class (Encoding, response extraction, 
 		' dictionary sorting, etc.)
 		Private m_objUtils 
 
@@ -55,7 +55,7 @@
 '***'CLASS_INITIALIZE / CLASS_TERMINATE
 	'**************************************************************************
 		Private Sub Class_Initialize()
-			' set default value to Null se we can check for null before get/set
+			' set default value to Null so we can check for null before get/set
 			m_blnLoggedIn = Null
 
 			' set default value to Nothing so we can check "If ... Is Nothing"
@@ -71,7 +71,7 @@
 			m_strRequestMethod = OAUTH_REQUEST_METHOD_POST 
 		End Sub
 		Private Sub Class_Terminate()
-			' kill obj erfs
+			' kill obj refs
 			Set m_objUtils = Nothing
 			Set m_objParameters = Nothing
 		End Sub
