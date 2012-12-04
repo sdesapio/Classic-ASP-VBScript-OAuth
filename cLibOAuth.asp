@@ -51,6 +51,9 @@
 		' Absolute URL is recommended
 		Private m_strTimeoutURL
 
+		' usded to set user-agent header
+		Private m_strUserAgent
+
 	'**************************************************************************
 '***'CLASS_INITIALIZE / CLASS_TERMINATE
 	'**************************************************************************
