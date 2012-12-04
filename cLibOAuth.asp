@@ -144,8 +144,8 @@
 				objXMLHTTP.setTimeouts OAUTH_TIMEOUT_RESOLVE, OAUTH_TIMEOUT_CONNECT, OAUTH_TIMEOUT_SEND, OAUTH_TIMEOUT_RECEIVE
 				objXMLHTTP.Open m_strRequestMethod, strRequestURL, False
 				objXMLHTTP.SetRequestHeader "Content-Type","application/x-www-form-urlencoded"
-				objXMLHTTP.SetRequestHeader "User-Agent","YOURAPPNAME" 
-				objXMLHTTP.SetRequestHeader "Host","api.twitter.com"	
+				objXMLHTTP.SetRequestHeader "User-Agent", TWITTER_APP_NAME
+				objXMLHTTP.SetRequestHeader "Host", TWITTER_API_HOST
 
 				objXMLHTTP.Send()
 
