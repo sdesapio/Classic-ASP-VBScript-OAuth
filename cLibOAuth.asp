@@ -123,6 +123,10 @@
 			m_strTimeoutURL = pData
 		End Property
 
+		Public Property Let UserAgent(pData)
+			m_strUserAgent = pData
+		End Property
+
 	'**************************************************************************
 '***'PUBLIC FUNCTIONS
 	'**************************************************************************
@@ -131,7 +135,7 @@
 	'	PARAMETERS:	
 	'	PURPOSE:	
 	'
-	'	AUTHOR:	sdesapio		DATE: 04.04.10		LAST MODIFIED: 
+	'	AUTHOR:	sdesapio		DATE: 04.04.10		LAST MODIFIED: 12.04.12 
 	'**************************************************************************
 		Public Sub Send()
 			' build Request URL
@@ -144,7 +148,7 @@
 				objXMLHTTP.setTimeouts OAUTH_TIMEOUT_RESOLVE, OAUTH_TIMEOUT_CONNECT, OAUTH_TIMEOUT_SEND, OAUTH_TIMEOUT_RECEIVE
 				objXMLHTTP.Open m_strRequestMethod, strRequestURL, False
 				objXMLHTTP.SetRequestHeader "Content-Type","application/x-www-form-urlencoded"
-				objXMLHTTP.SetRequestHeader "User-Agent", TWITTER_APP_NAME
+				objXMLHTTP.SetRequestHeader "User-Agent", m_strUserAgent
 				objXMLHTTP.SetRequestHeader "Host", TWITTER_API_HOST
 
 				objXMLHTTP.Send()
